@@ -1,0 +1,21 @@
+.centralizar{
+    flex-grow: 1;
+    
+}
+.custom-btn-red {
+    background-color: #B01818;
+    color: white;
+    border: none;
+}
+
+.custom-btn-red:hover {
+    background-color: darkred; /* Adicione um efeito hover, se desejar */
+}
+
+.separatorBarra {
+    margin-left: 10px;  /* Espaçamento à esquerda do separador */
+    margin-right: 10px; /* Espaçamento à direita do separador */
+    font-size: 20px;    /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 5px;
+}
+

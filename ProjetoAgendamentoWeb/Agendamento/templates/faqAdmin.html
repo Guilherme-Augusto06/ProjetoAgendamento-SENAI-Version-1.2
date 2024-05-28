@@ -1,0 +1,50 @@
+{% extends "indexAdmin.html" %}
+{% load static %}
+
+{% block body %}
+
+
+  <h2 class="h2faq">Suporte - Agendamento Senai</h2>
+
+  <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol viewBox="0 0 24 24" id="expand-more">
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" id="close">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <details class="detailsfaq" open>
+    <summary class="summaryfaq">
+      Como faço para agendar uma sala?
+      <svg class="control-iconfaq control-iconfaq-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+      <svg class="control-iconfaq control-iconfaq-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Após fazer login, vá para a seção de agendamento de salas, selecione a data e o horário desejados, escolha a sala disponível, preencha os detalhes do evento e clique em "Reservar".</p>
+  </details>
+
+  <details class="detailsfaq">
+    <summary class="summaryfaq">
+      Posso editar ou cancelar uma reserva?
+      <svg class="control-iconfaq control-iconfaq-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+      <svg class="control-iconfaq control-iconfaq-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Sim, você pode editar ou cancelar uma reserva. Vá para "Minhas Reservas", selecione a reserva que deseja modificar e clique em "Editar" ou "Cancelar". Certifique-se de fazer isso com antecedência para que a sala possa ser disponibilizada para outros usuários.</p>
+  </details>
+
+  <details class="detailsfaq">
+    <summary class="summaryfaq">
+      O que devo fazer se encontrar um conflito de horário?
+      <svg class="control-iconfaq control-iconfaq-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+      <svg class="control-iconfaq control-iconfaq-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Caso encontre um conflito de horário, verifique outras salas ou horários disponíveis. Se o problema persistir, entre em contato com o suporte técnico para assistência.</p>
+  </details>
+
+
+
+
+{% endblock %}

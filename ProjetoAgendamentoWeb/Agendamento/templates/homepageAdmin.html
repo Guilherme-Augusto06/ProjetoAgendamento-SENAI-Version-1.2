@@ -1,0 +1,64 @@
+{% extends "indexAdmin.html" %}
+{% load static %}
+
+
+{% block body %}
+<div class="container1">
+    <h1>Agendamento de salas</h1>
+    <p>Apenas permissão dos Professores e coordenadores</p>
+    <div class="table-actions">
+        <button id="deleteBtn">Delete</button>
+        <button id="filterBtn">Filters</button>
+        <button id="exportBtn">Export</button>
+        <button id="addBtn" class="add-new">+ Adicionar</button>
+    </div>
+    <table class="student-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll"><label for="selectAll"></label></th>
+                <th>Sala</th>      
+                <th>Número</th>
+                <th>Corredor</th>
+                <th>Agendamento</th>
+                <th>Equipamentos</th>
+            </tr>
+        </thead>
+        {% for item in dadosSalas %}
+        <tbody>
+            
+            <tr>
+                <td><input type="checkbox" class="select-row" id="arthur"><label for="arthur"></label></td>
+                <td>{{item.salas}}</td>
+                <td>{{item.numero}}</td>
+                <td>{{item.corredor}}</td>
+                <td class="status inactive">Inactive</td>
+                <td>{{item.equipamentos}}</td>
+            </tr>
+            
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+<!-- Modal -->
+<div id="addRoomModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Adicione uma sala ao banco de dados</h2>
+        <form>
+            <label for="roomName">Sala:</label>
+            <input type="text" id="roomName" name="roomName" placeholder="Nome da Sala"><br>
+            <label for="roomNumber">Nº - Sala:</label>
+            <input type="text" id="roomNumber" name="roomNumber" placeholder="Número da sala"><br>
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" name="description" placeholder="Descrição"><br>
+            <label for="equipment">Equipamentos:</label>
+            <input type="text" id="equipment" name="equipment" placeholder="Equipamentos"><br>
+            <button type="submit" class="add-btn">+ Adicionar</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

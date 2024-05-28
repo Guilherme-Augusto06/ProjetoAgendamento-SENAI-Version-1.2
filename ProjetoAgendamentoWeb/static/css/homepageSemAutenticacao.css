@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no topo */
+    padding: 2% 5%; /* Adiciona um pouco de padding para espaçamento */
+}
+
+.conteudoTexto {
+    flex: 1; /* Ocupa o espaço disponível */
+    margin-right: 20px; /* Espaço entre o texto e a imagem */
+}
+
+.imagemHomepage img {
+    max-width: 50%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Mantendo o estilo existente */
+.wave-container {
+    position: fixed;
+    bottom: 0; /* Fixa o container no final da tela */
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0; /* Fixa as ondas no final da tela */
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+}
+
+.conteudoTexto {
+    margin-top: 2%;
+}
+
+.subtitulo {
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.titulo {
+    margin: auto;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: poppins;
+    color: #3CB018;
+}
+
+.subTexto {
+    margin: auto;
+    font-size: 12px;
+    font-family: poppins;
+    color: #303030;
+}
+
+.btn-custom {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens em uma coluna */
+        align-items: center; /* Centraliza os itens */
+        padding: 2% 5%; /* Mantém o padding */
+    }
+
+    .conteudoTexto {
+        margin-right: 0; /* Remove o margin-right */
+        margin-bottom: 20px; /* Adiciona espaço abaixo do texto */
+    }
+
+    .imagemHomepage {
+        display: none; /* Remove a imagem em dispositivos móveis */
+    }
+}

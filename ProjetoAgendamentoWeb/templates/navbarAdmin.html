@@ -1,0 +1,71 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid justify-content-center">
+        <a href="homepageAdmin"><img src="{{ dadosSenai.0.logo.url }}" alt="Logo" style="width: 125px; height: 30px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="centralizar">
+
+            
+          </div>
+        {% if user.is_authenticated %}
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-auto"> <!-- Adicionei a classe mx-auto para centralizar horizontalmente -->
+              <a class="nav-link active nav-link-hover" aria-current="page" href="#">Salas</a>
+            </li>
+        </ul>
+        <div >
+
+            <p class="separatorBarra">|</p>
+
+          </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-auto"> <!-- Adicionei a classe mx-auto para centralizar horizontalmente -->
+              <a class="nav-link active nav-link-hover" aria-current="page" href="#">Agendar</a>
+            </li>
+        </ul>  
+        <div >
+
+            <p class="separatorBarra">|</p>
+
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-auto"> <!-- Adicionei a classe mx-auto para centralizar horizontalmente -->
+              <a class="nav-link active nav-link-hover" aria-current="page" href="faqAdmin">FAQ</a>
+            </li>
+        </ul>
+        <div >
+
+          <p class="separatorBarra">|</p>
+
+        </div>
+          <div class="botaoEntrar">
+            <a href="/logout" class="btn btn-danger"><span class="material-symbols-outlined" style="font-size: 15px; margin-right: 10px; ">arrow_back</span>Sair</a>
+
+          </div>
+
+        {% else %}
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-auto"> <!-- Adicionei a classe mx-auto para centralizar horizontalmente -->
+              <a class="nav-link active nav-link-hover" aria-current="page" href="faqAdmin">FAQ</a>
+            </li>
+        </ul>
+          <div >
+
+            <p class="separatorBarra">|</p>
+
+          </div>
+
+
+            <div class="botaoEntrar">
+              <a href="login" class="btn btn-danger">Entrar</a>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+</nav>
